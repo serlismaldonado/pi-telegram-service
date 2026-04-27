@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.env
+sessions/
+logs/
+*.js.map
+*.db
+*.db-shm
+*.db-wal
