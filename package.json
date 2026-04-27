@@ -1,15 +1,31 @@
 {
   "name": "pi-telegram-service",
   "version": "1.0.0",
-  "description": "Pi coding agent as a 24/7 Telegram service",
+  "description": "24/7 Telegram bot powered by the Pi coding agent SDK — per-user sessions, persistent memory, multi-LLM support",
   "type": "module",
   "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/serlismaldonado/pi-telegram-service"
+  },
+  "keywords": ["telegram", "bot", "pi", "pi-agent", "llm", "minimax", "anthropic", "ai"],
+  "author": "serlismaldonado",
+  "license": "MIT",
+  "files": [
+    "dist/",
+    "src/",
+    ".env.example",
+    "ecosystem.config.cjs",
+    "scripts/",
+    "README.md"
+  ],
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.js",
     "dev": "tsx watch src/index.ts",
     "logs": "pm2 logs pi-telegram",
-    "status": "pm2 status"
+    "status": "pm2 status",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "@mariozechner/pi-ai": "latest",

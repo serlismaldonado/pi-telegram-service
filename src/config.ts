@@ -24,8 +24,8 @@ export const config = {
     minimaxKey: process.env.MINIMAX_API_KEY,
   },
   agent: {
-    modelProvider: optional("AGENT_MODEL_PROVIDER", "minimax"),
-    modelId: optional("AGENT_MODEL_ID", "MiniMax-M2.7"),
+    modelProvider: process.env.AGENT_MODEL_PROVIDER,
+    modelId: process.env.AGENT_MODEL_ID,
     systemPrompt: optional(
       "AGENT_SYSTEM_PROMPT",
       "You are a helpful assistant. Be concise and clear."

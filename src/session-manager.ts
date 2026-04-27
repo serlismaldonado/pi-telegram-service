@@ -125,9 +125,13 @@ export async function getOrCreateSession(chatId: string): Promise<any> {
   const authStorage = buildAuthStorage();
   const modelRegistry = ModelRegistry.inMemory(authStorage);
 
-  const model = modelRegistry.find(config.agent.modelProvider, config.agent.modelId);
-  if (!model) {
-    throw new Error(`Model not found: ${config.agent.modelProvider}/${config.agent.modelId}`);
+  // Resolve model explicitly if set in env, otherwise Pi uses ~/.pi/agent/settings.json default
+  let model = undefined;
+  if (config.agent.modelProvider && config.agent.modelId) {
+    model = modelRegistry.find(config.agent.modelProvider, config.agent.modelId);
+    if (!model) {
+      throw new Error(`Model not found: ${config.agent.modelProvider}/${config.agent.modelId}`);
+    }
   }
 
   const sessionDir = getUserSessionDir(chatId);
