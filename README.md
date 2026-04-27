@@ -249,17 +249,17 @@ chmod +x "$HOME/Library/Application Support/xbar/plugins/pi-telegram.5s.sh"
 
 Luego haz clic en **xbar → Refresh all**.
 
-### Qué muestra
+### What it shows
 
 ```
 🟢 Pi Bot  ▾
-├── Estado: online
+├── Status: online
 ├── RAM: 176 MB
-├── Reinicios: 0
-├── 🔄 Reiniciar
-├── ⏹ Detener
-├── ▶️ Iniciar
-└── 📋 Ver logs
+├── Restarts: 0
+├── 🔄 Restart
+├── ⏹ Stop
+├── ▶️ Start
+└── 📋 View logs
 ```
 
-Se actualiza automáticamente cada 5 segundos.
+Updates automatically every 5 seconds.
