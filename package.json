@@ -1,6 +1,6 @@
 {
   "name": "pi-telegram-service",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "24/7 Telegram bot powered by the Pi coding agent SDK — per-user sessions, persistent memory, multi-LLM support",
   "type": "module",
   "main": "dist/index.js",
@@ -8,7 +8,16 @@
     "type": "git",
     "url": "https://github.com/serlismaldonado/pi-telegram-service"
   },
-  "keywords": ["telegram", "bot", "pi", "pi-agent", "llm", "minimax", "anthropic", "ai"],
+  "keywords": [
+    "telegram",
+    "bot",
+    "pi",
+    "pi-agent",
+    "llm",
+    "minimax",
+    "anthropic",
+    "ai"
+  ],
   "author": "serlismaldonado",
   "license": "MIT",
   "files": [
